@@ -1,0 +1,15 @@
+Below is a brief overview of the key efficiency and smart design improvements we suggested:
+
+Candidate–Based FM Heuristic:
+Instead of checking every possible pair (an O(n²) operation), we only consider the top‑k vertices (from each partition) ranked by their gain. For a 500–vertex graph, this greatly reduces the number of comparisons while still focusing on promising swaps. Although the assignment mentions using double–linked lists for constant–time updates, our candidate approach strikes a good balance between efficiency and implementation clarity given the problem size.
+
+Balance-Preserving Operators:
+Our mutation and crossover functions are carefully designed to always preserve the equal number of zeros and ones. This not only meets the problem constraints but also avoids the need for additional rebalancing later, ensuring the search remains within the feasible solution space.
+
+Modular and Clear Structure:
+We separated the code into logical sections (graph reading, utility functions, FM heuristic, metaheuristics, experimental routines). This modular design makes the code easier to maintain, test, and extend. Comments focus on explaining why design decisions were made rather than just describing what each line does.
+
+Practical Trade-offs:
+Given the experimental nature of the assignment, we chose methods that provide substantial improvements (like candidate selection) without overly complicating the code. This allows for clear experimental comparisons and easier debugging.
+
+These improvements aim to make the code both efficient and easier to understand, which is critical for an experimental project like this one.
